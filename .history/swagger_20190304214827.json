@@ -1,0 +1,47 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "customer",
+    "version": "0.0.1"
+  },
+  "host": "customer.endpoints.phdigidev.cloud.goog",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "parameters": [],
+    "/address": {
+      "post": {
+        "summary": "CREATE ADDRESS",
+        "operationId": "CreateAddress",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/Address"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Address"
+            }
+          }
+        ],
+        "tags": [
+          "CustomerAccount"
+        ]
+      }
+    }
+  }
+}
